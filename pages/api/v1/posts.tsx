@@ -1,7 +1,7 @@
 import {NextApiRequest, NextApiResponse} from "next";
-import {getPosts} from "../../../lib/posts";
+import {getPosts} from "lib/posts";
 
-const posts = async (req: NextApiRequest, res: NextApiResponse) => {
+const Posts = async (req: NextApiRequest, res: NextApiResponse) => {
     const filesText = await getPosts()
     res.statusCode = 200
     res.setHeader('content-type', 'application/json')
@@ -9,4 +9,4 @@ const posts = async (req: NextApiRequest, res: NextApiResponse) => {
     res.end()
 }
 
-export default posts;
+export default Posts;
