@@ -1,8 +1,9 @@
 import React from "react";
 
 import {usePosts} from "../../hooks/usePosts";
+import {NextPage} from "next";
 
-export default function First() {
+const First:NextPage = () => {
     const {isEmpty,  isLoading,  posts} = usePosts()
 
     return (
@@ -16,3 +17,5 @@ export default function First() {
         </div>
     )
 }
+
+export default First;
