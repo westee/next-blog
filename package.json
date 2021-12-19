@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
     "axios": "^0.24.0",
     "gray-matter": "^4.0.3",
     "marked": "^4.0.8",
