@@ -11,4 +11,8 @@ export class Post {
 
     @Column('text')
     content: string;
+
+    constructor(attributes: Partial<Post> ) {
+        Object.assign(this, attributes);
+    }
 }
