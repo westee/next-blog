@@ -1,10 +1,19 @@
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import {
+    Column,
+    CreateDateColumn,
+    Entity,
+    ManyToOne,
+    OneToMany,
+    PrimaryGeneratedColumn,
+    UpdateDateColumn
+} from "typeorm";
+import {User} from "./User";
+import {Comment} from "./Comment";
 
 @Entity('posts')
 export class Post {
-
     @PrimaryGeneratedColumn('increment')
-    id:number;
+    id: number;
 
     @Column('varchar')
     title: string;
@@ -12,7 +21,15 @@ export class Post {
     @Column('text')
     content: string;
 
-    constructor(attributes: Partial<Post> ) {
-        Object.assign(this, attributes);
-    }
+    @ManyToOne(type => User, user => user.posts)
+    author: User;
+
+    @OneToMany(type => Comment, comment => comment.post)
+    comments: Comment[];
+
+    @CreateDateColumn()
+    createdAt: Date;
+
+    @UpdateDateColumn()
+    updateAt: Date;
 }
