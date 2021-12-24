@@ -31,5 +31,5 @@ export class Post {
     createdAt: Date;
 
     @UpdateDateColumn()
-    updateAt: Date;
+    updatedAt: Date;
 }
