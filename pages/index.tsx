@@ -12,8 +12,15 @@ export default function Home(props: Props ) {
     const {posts} = props;
     console.log(posts);
     return (
-        <div className={styles.container}>
-            {posts.map(post => <div>{post.title}</div>)}
+        <div>
+            <h1>文章列表</h1>
+            {
+                posts.map(p => <div key={p.id}>
+                    <Link href={`/posts/${p.id}`}>
+                        <a>{p.title}</a>
+                    </Link>
+                </div>)
+            }
         </div>
     )
 }
