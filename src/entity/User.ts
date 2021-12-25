@@ -10,7 +10,7 @@ export class User {
     @Column('varchar')
     username: string;
 
-    @Column('varchar')
+    @Column({type: 'varchar', select: false})
     passwordDigest: string;
 
     @OneToMany(type => Comment, comment => comment.user)

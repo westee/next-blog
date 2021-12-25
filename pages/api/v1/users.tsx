@@ -46,8 +46,9 @@ const Posts: NextApiHandler = async (req, res) => {
         user.username = username.trim();
         user.passwordDigest = md5(password);
         await connection.manager.save(user);
+        const newResult = await connection.manager.findOne('users', {username});
         res.statusCode = 200;
-        res.write(JSON.stringify(user));
+        res.write(JSON.stringify(newResult));
     }
     res.end();
 };
