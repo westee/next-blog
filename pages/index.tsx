@@ -2,6 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
+import {getDatabaseConnection} from "../lib/getDatabaseConnection";
+import {getPosts} from "../lib/posts";
+import {GetServerSideProps} from "next";
 
 export default function Home() {
     return (
@@ -39,4 +42,11 @@ export default function Home() {
             `}</style>
         </div>
     )
+}
+
+export const getServerSideProps:GetServerSideProps = async () => {
+    var databaseConnection = getDatabaseConnection();
+    return {
+        props: {}
+    }
 }
