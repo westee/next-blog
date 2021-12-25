@@ -1,5 +1,18 @@
 import {createConnection, getConnectionManager} from "typeorm";
 
+import 'reflect-metadata'
+import {Post} from "../src/entity/Post";
+import {User} from "../src/entity/User";
+import {Comment} from "src/entity/Comment";
+import  config from 'ormconfig.json'
+const create = async () => {
+    // @ts-ignore
+    return createConnection({
+        ...config,
+        entities:[Post, Comment, User]
+    });
+}
+
 const promise = (async () => {
     const manager = getConnectionManager();
     if(manager.has('default')) {
@@ -7,11 +20,10 @@ const promise = (async () => {
         if(c.isConnected) {
             return c;
         } else {
-            return createConnection();
+            return create();
         }
     } else {
-        console.log(123);
-        return createConnection();
+        return create();
     }
 })()
 
