@@ -6,9 +6,12 @@ import md5 from 'md5';
 
 const Posts: NextApiHandler = async (req, res) => {
     const {username, password, passwordConfirmation} = req.body;
+    const connection = await getDatabaseConnection();// 第一次链接能不能用 get
+
     const errors = {
         username: [] as string[], password: [] as string[], passwordConfirmation: [] as string[]
     };
+
     if (username.trim() === '') {
         errors.username.push('不能为空');
     }
@@ -27,13 +30,18 @@ const Posts: NextApiHandler = async (req, res) => {
     if (password !== passwordConfirmation) {
         errors.passwordConfirmation.push('密码不匹配');
     }
+
+    const result = await connection.manager.findOne('users', {username});
+    if(result) {
+        errors.username.push('用户名已存在');
+    }
+
     const hasErrors = Object.values(errors).find(v => v.length > 0);
     res.setHeader('Content-Type', 'application/json; charset=utf-8');
     if (hasErrors) {
         res.statusCode = 422;
         res.write(JSON.stringify(errors));
     } else {
-        const connection = await getDatabaseConnection();// 第一次链接能不能用 get
         const user = new User();
         user.username = username.trim();
         user.passwordDigest = md5(password);
