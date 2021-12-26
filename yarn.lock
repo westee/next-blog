@@ -334,6 +334,13 @@
     "@hapi/boom" "9.x.x"
     "@hapi/hoek" "9.x.x"
 
+"@hapi/b64@5.x.x":
+  version "5.0.0"
+  resolved "https://registry.npmmirror.com/@hapi/b64/download/@hapi/b64-5.0.0.tgz"
+  integrity sha1-uCEMvXL0d0mF54Vpt36XSY0kJ30=
+  dependencies:
+    "@hapi/hoek" "9.x.x"
+
 "@hapi/boom@9.x.x":
   version "9.1.4"
   resolved "https://registry.npmmirror.com/@hapi/boom/download/@hapi/boom-9.1.4.tgz"
@@ -341,10 +348,33 @@
   dependencies:
     "@hapi/hoek" "9.x.x"
 
+"@hapi/bourne@2.x.x":
+  version "2.0.0"
+  resolved "https://registry.npmmirror.com/@hapi/bourne/download/@hapi/bourne-2.0.0.tgz"
+  integrity sha1-W7IZPraFwAB1QMph0WbU4e2vkY0=
+
+"@hapi/cryptiles@5.x.x":
+  version "5.1.0"
+  resolved "https://registry.npmmirror.com/@hapi/cryptiles/download/@hapi/cryptiles-5.1.0.tgz"
+  integrity sha1-ZV3ky7wFLJR/aWFIyDsYf8K+j0M=
+  dependencies:
+    "@hapi/boom" "9.x.x"
+
 "@hapi/hoek@9.x.x":
   version "9.2.1"
   resolved "https://registry.npmmirror.com/@hapi/hoek/download/@hapi/hoek-9.2.1.tgz"
   integrity sha1-lVEUKhmAUDdSU2tQUP2Z9KfxOxc=
+
+"@hapi/iron@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.npmmirror.com/@hapi/iron/download/@hapi/iron-6.0.0.tgz"
+  integrity sha1-yj+RNs2mVb3WAo3gBF2g3j0UQ28=
+  dependencies:
+    "@hapi/b64" "5.x.x"
+    "@hapi/boom" "9.x.x"
+    "@hapi/bourne" "2.x.x"
+    "@hapi/cryptiles" "5.x.x"
+    "@hapi/hoek" "9.x.x"
 
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.2"
@@ -495,6 +525,11 @@
   resolved "https://registry.npmmirror.com/@sqltools/formatter/download/@sqltools/formatter-1.2.3.tgz"
   integrity sha1-EYVyZhCsw3MX3asRw8f5BmlmvSA=
 
+"@types/cookie@^0.4.0":
+  version "0.4.1"
+  resolved "https://registry.npmmirror.com/@types/cookie/download/@types/cookie-0.4.1.tgz"
+  integrity sha1-v9AsHyIkVnZ2wVRRmfh8OoYdh40=
+
 "@types/json-schema@^7.0.8":
   version "7.0.9"
   resolved "https://registry.npmmirror.com/@types/json-schema/download/@types/json-schema-7.0.9.tgz"
@@ -507,7 +542,7 @@
 
 "@types/lodash@^4.14.178":
   version "4.14.178"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.178.tgz#341f6d2247db528d4a13ddbb374bcdc80406f4f8"
+  resolved "https://registry.npmmirror.com/@types/lodash/download/@types/lodash-4.14.178.tgz"
   integrity sha512-0d5Wd09ItQWH1qFbEyQ7oTQ3GZrMfth5JkbN3EvTKLXcHLRDSXeLnlvlOn0wvxVIwK5o2M8JzP/OWz7T3NRsbw==
 
 "@types/marked@^4.0.1":
@@ -727,7 +762,7 @@ array-union@^2.1.0:
   resolved "https://registry.npmmirror.com/array-union/download/array-union-2.1.0.tgz"
   integrity sha1-t5hCCtvrHego2ErNii4j0+/oXo0=
 
-array.prototype.flat@^1.2.5:
+array.prototype.flat@^1.2.4, array.prototype.flat@^1.2.5:
   version "1.2.5"
   resolved "https://registry.npmmirror.com/array.prototype.flat/download/array.prototype.flat-1.2.5.tgz"
   integrity sha1-B+CXXYS7x8SM0YedYJ5oJZjTPhM=
@@ -1063,6 +1098,11 @@ cliui@^7.0.2:
     strip-ansi "^6.0.0"
     wrap-ansi "^7.0.0"
 
+clone@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.npmmirror.com/clone/download/clone-2.1.2.tgz"
+  integrity sha1-G39Ln1kfHo+DZwQBYANFoCiHQ18=
+
 color-convert@^1.9.0:
   version "1.9.3"
   resolved "https://registry.npmmirror.com/color-convert/download/color-convert-1.9.3.tgz"
@@ -1118,6 +1158,11 @@ convert-source-map@1.7.0, convert-source-map@^1.1.0, convert-source-map@^1.7.0:
   integrity sha1-F6LLiC1/d9NJBYXizmxSRCSjpEI=
   dependencies:
     safe-buffer "~5.1.1"
+
+cookie@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.npmmirror.com/cookie/download/cookie-0.4.1.tgz"
+  integrity sha1-r9cT/ibr0hupXOth+agRblClN9E=
 
 core-js-pure@^3.19.0:
   version "3.19.3"
@@ -2038,6 +2083,14 @@ internal-slot@^1.0.3:
     has "^1.0.3"
     side-channel "^1.0.4"
 
+iron-store@^1.3.0:
+  version "1.3.5"
+  resolved "https://registry.npmmirror.com/iron-store/download/iron-store-1.3.5.tgz"
+  integrity sha1-YnCcY4GvciBtigCtfedtARrrZaQ=
+  dependencies:
+    "@hapi/iron" "^6.0.0"
+    clone "^2.1.2"
+
 is-arguments@^1.0.4:
   version "1.1.1"
   resolved "https://registry.npmmirror.com/is-arguments/download/is-arguments-1.1.1.tgz"
@@ -2413,6 +2466,18 @@ miller-rabin@^4.0.0:
     bn.js "^4.0.0"
     brorand "^1.0.1"
 
+mime-db@1.51.0:
+  version "1.51.0"
+  resolved "https://registry.npmmirror.com/mime-db/download/mime-db-1.51.0.tgz?cache=0&sync_timestamp=1636425999210&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fmime-db%2Fdownload%2Fmime-db-1.51.0.tgz"
+  integrity sha512-5y8A56jg7XVQx2mbv1lu49NR4dokRnhZYTtL+KGfaa27uq4pSTXkwQkFJl4pkRMyNFz/EtYDSkiiEHx3F7UN6g==
+
+mime-types@^2.1.27:
+  version "2.1.34"
+  resolved "https://registry.npmmirror.com/mime-types/download/mime-types-2.1.34.tgz?cache=0&sync_timestamp=1636432299957&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fmime-types%2Fdownload%2Fmime-types-2.1.34.tgz"
+  integrity sha512-6cP692WwGIs9XXdOO4++N+7qjqv0rqxxVvJ3VHPh/Sc9mVZcQP+ZGhkKiTvWMQRr2tbHkJP/Yn7Y0npb3ZBs4A==
+  dependencies:
+    mime-db "1.51.0"
+
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmmirror.com/minimalistic-assert/download/minimalistic-assert-1.0.1.tgz"
@@ -2473,6 +2538,26 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmmirror.com/natural-compare/download/natural-compare-1.4.0.tgz"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
+
+next-images@^1.8.4:
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/next-images/-/next-images-1.8.4.tgz#3b3d4840dae50893fc2a15906266532ec5fa58f0"
+  integrity sha512-E6JV+aMxeUCh8A+cwn1xgmlh/zINSW4JC/XLNbM+PWQd5LBdfB+m1IDCAfNnGOKMo96kzw+4LsKxnX/Kldw78Q==
+  dependencies:
+    file-loader "^6.2.0"
+    url-loader "^4.1.0"
+
+next-iron-session@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.npmmirror.com/next-iron-session/download/next-iron-session-4.2.0.tgz"
+  integrity sha1-ytlxOJsIRatFF9iwlt6oF7Aigw8=
+  dependencies:
+    "@types/cookie" "^0.4.0"
+    array.prototype.flat "^1.2.4"
+    clone "^2.1.2"
+    cookie "^0.4.1"
+    debug "^4.3.1"
+    iron-store "^1.3.0"
 
 next@*, next@12.0.7:
   version "12.0.7"
@@ -3521,6 +3606,11 @@ type-fest@^0.7.1:
   resolved "https://registry.npmmirror.com/type-fest/download/type-fest-0.7.1.tgz"
   integrity sha1-jdpl/q8D7Xjwo/lnjxhpFH98XEg=
 
+typed.js@^2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/typed.js/-/typed.js-2.0.12.tgz#246aff074c8e18d32ec27acb7be15094ac0bc0e1"
+  integrity sha512-lyACZh1cu+vpfYY3DG/bvsGLXXbdoDDpWxmqta10IQUdMXisMXOEyl+jos+YT9uBbzK4QaKYBjT3R0kTJO0Slw==
+
 typeorm@^0.2.41:
   version "0.2.41"
   resolved "https://registry.npmmirror.com/typeorm/download/typeorm-0.2.41.tgz"
@@ -3574,6 +3664,15 @@ uri-js@^4.2.2:
   integrity sha1-mxpSWVIlhZ5V9mnZKPiMbFfyp34=
   dependencies:
     punycode "^2.1.0"
+
+url-loader@^4.1.0:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/url-loader/-/url-loader-4.1.1.tgz#28505e905cae158cf07c92ca622d7f237e70a4e2"
+  integrity sha512-3BTV812+AVHHOJQO8O5MkWgZ5aosP7GnROJwvzLS9hWDj00lZ6Z0wNak423Lp9PBZN05N+Jk/N5Si8jRAlGyWA==
+  dependencies:
+    loader-utils "^2.0.0"
+    mime-types "^2.1.27"
+    schema-utils "^3.0.0"
 
 use-subscription@1.5.1:
   version "1.5.1"
