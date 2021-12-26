@@ -1,3 +1,4 @@
+// @ts-ignore
 import {withIronSession} from 'next-iron-session';
 import {GetServerSideProps, NextApiHandler} from 'next';
 
